@@ -82,7 +82,7 @@ function doCompress(path){
 
 program.version('0.0.1').option('-p, --path', 'compress path');
 
-program.command('*').description('static resource compress').action(function(){
+program.command('all').description('static resource compress').action(function(){
 
   var args = Array.prototype.slice.call(arguments);
   var options = args.pop();

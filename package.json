@@ -7,12 +7,13 @@
     "test": "(none)"
   },
   "author": {
-    "name": "wangliming"
+    "name": "wangliming",
+    "email": "wangliming05231105@126.com"
   },
   "license": "(none)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wangliming/festaticcompress/trunk"
+    "url": "https://github.com/festaticcompress/festaticcompress.git"
   },
   "keywords": [
     "fe static resource compress"
