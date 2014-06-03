@@ -1,0 +1,24 @@
+{
+  "name": "festaticcompress",
+  "version": "1.0.0",
+  "description": "festaticcompress",
+  "main": "wangliming.js",
+  "scripts": {
+    "test": "(none)"
+  },
+  "author": {
+    "name": "wangliming"
+  },
+  "license": "(none)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangliming/festaticcompress/trunk"
+  },
+  "keywords": [
+    "fe static resource compress"
+  ],
+  "readme": "wangliming fe static resource compress\n",
+  "readmeFilename": "README.md",
+  "_id": "festaticcompress@1.0.0",
+  "_from": "festaticcompress@"
+}

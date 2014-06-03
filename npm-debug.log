@@ -1,0 +1,30 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'search', 'tmpl' ]
+2 info using npm@1.2.32
+3 info using node@v0.10.12
+4 warn Building the local index for the first time, please be patient
+5 verbose url raw /-/all
+6 verbose url resolving [ 'https://registry.npmjs.org/', './-/all' ]
+7 verbose url resolved https://registry.npmjs.org/-/all
+8 info trying registry request attempt 1 at 11:16:17
+9 http GET https://registry.npmjs.org/-/all
+10 http 200 https://registry.npmjs.org/-/all
+11 error TypeError: Object.keys called on non-object
+11 error     at Function.keys (native)
+11 error     at stripData (/usr/local/lib/node_modules/npm/lib/search.js:89:28)
+11 error     at Array.map (native)
+11 error     at filter (/usr/local/lib/node_modules/npm/lib/search.js:73:6)
+11 error     at /usr/local/lib/node_modules/npm/lib/search.js:63:21
+11 error     at /usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:89:14
+11 error     at Object.oncomplete (fs.js:107:15)
+12 error If you need help, you may report this log at:
+12 error     <http://github.com/isaacs/npm/issues>
+12 error or email it to:
+12 error     <npm-@googlegroups.com>
+13 error System Darwin 13.2.0
+14 error command "node" "/usr/local/bin/npm" "search" "tmpl"
+15 error cwd /Users/wangliming/node_modules/festaticcompress
+16 error node -v v0.10.12
+17 error npm -v 1.2.32
+18 error type called_on_non_object
+19 verbose exit [ 1, true ]
