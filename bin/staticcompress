@@ -1,0 +1,77 @@
+#!/usr/bin/env node
+
+var program = require('commander'),
+  compress = require('../festaticcompress.js'),
+  fileWalk = require('node-walker'),
+  argv = process.argv;
+
+var first = argv[2];
+if(argv.length < 3 || first === '-h' || first === '--help'){
+  var content = [
+        '',
+        '  Usage: festaticcompress <command>',
+        '',
+        '  Commands:',
+        '',
+        '    all  compress all static resource'
+    ];
+    content = content.concat([
+        '',
+        '  Options:',
+        '',
+        '    -p, --path  resource path',
+        '    -h, --help  help',
+        ''
+    ]);
+    console.log(content.join('\n'));
+    return false;
+}
+
+program.command('all').option('-p').description('static resource compress').action(function(path){
+  
+  if(!path){
+    console.log('path error!please check...');
+    return false;
+  }
+  fileWalk(path).filterDir(function(dir, stat) {
+      // if (dir === '/etc/pam.d') {
+      //   console.warn('Skipping /etc/pam.d and children')
+      //   return false
+      // }
+      return true;
+    })
+    .on('entry', function(entry, stat) {
+      // console.log('Got entry: ' + entry)
+    })
+    .on('dir', function(dir, stat) {
+      // console.log('Got directory: ' + dir)
+    })
+    .on('file', function(file, stat) {
+      compress(file);
+    })
+    .on('symlink', function(symlink, stat) {
+      // console.log('Got symlink: ' + symlink)
+    })
+    .on('blockDevice', function(blockDevice, stat) {
+      // console.log('Got blockDevice: ' + blockDevice)
+    })
+    .on('fifo', function(fifo, stat) {
+      // console.log('Got fifo: ' + fifo)
+    })
+    .on('socket', function(socket, stat) {
+      // console.log('Got socket: ' + socket)
+    })
+    .on('characterDevice', function(characterDevice, stat) {
+      // console.log('Got characterDevice: ' + characterDevice)
+    })
+    .on('error', function(er, entry, stat) {
+      // console.log('Got error ' + er + ' on entry ' + entry)
+    })
+    .on('end', function() {
+        compress.setCacheMap();
+    });
+});
+program.command('*').description('static resource compress').action(function(){
+  console.log('other');
+});
+program.parse(argv);
