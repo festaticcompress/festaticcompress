@@ -1,8 +1,8 @@
 {
   "name": "festaticcompress",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "festaticcompress",
-  "main": "wangliming.js",
+  "main": "festaticcompress.js",
   "scripts": {
     "test": "(none)"
   },
@@ -18,8 +18,11 @@
   "keywords": [
     "fe static resource compress"
   ],
+  "bin": {
+    "festaticcompress" : "bin/staticcompress" 
+  },
   "readme": "wangliming fe static resource compress\n",
   "readmeFilename": "README.md",
-  "_id": "festaticcompress@1.0.0",
-  "_from": "festaticcompress@"
+  "_id": "festaticcompress@1.0.3",
+  "_from": "festaticcompress@1.0.3"
 }
