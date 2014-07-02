@@ -1,6 +1,6 @@
 {
   "name": "festaticcompress",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "festaticcompress",
   "main": "festaticcompress.js",
   "scripts": {
@@ -33,6 +33,6 @@
   },
   "readme": "wangliming fe static resource compress\n",
   "readmeFilename": "README.md",
-  "_id": "festaticcompress@1.0.4",
-  "_from": "festaticcompress@1.0.4"
+  "_id": "festaticcompress@1.0.5",
+  "_from": "festaticcompress@1.0.5"
 }

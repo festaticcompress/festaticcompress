@@ -19,8 +19,8 @@ var _ = {
     return new RegExp(''+type+'', 'i').test(arrTypes.join('|'));
   },
   getFileType: function(path){
-    var arr = /\.(.*)$/.exec(path);
-    return arr ? arr[1] : "";
+    var arr = /\.([\w\d]*)$/.exec(path);
+    return arr ? arr[1] : false;
   },
   md5: function(data, len){
     var md5sum = crypto.createHash('md5'),

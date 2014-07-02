@@ -2,7 +2,7 @@
 
 var program = require('commander'),
   compress = require('../festaticcompress.js'),
-  fileWalk = require('node-walker'),
+  fileWalk = require('walker'),
   argv = process.argv;
 
 var first = argv[2];
